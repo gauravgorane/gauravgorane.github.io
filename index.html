@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <nav>
+    <h2 id="logo">Gaurav Gorane</h2>
+    <ul class="navigation-items">
+      <li class="navigation-item"><a href="#about-me">About Me</a></li>
+      <li class="navigation-item"><a href="#projects">Projects</a></li>
+      <li class="navigation-item"><a href="#skills">Skills</a></li>
+      <li class="navigation-item"><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about-me">
+      <div class="about-me-container">
+        <div class="about-me-text-container">
+          <h2>About Me</h2>
+          <p>
+            Hi! I'm Gaurav Gorane, I am a Computer Engineering student with a passion for Web Development. I'm
+            interested in enhancing the user experience to be more engaging. I'm looking to work on projects that make
+            solving problems easier.
+          </p>
+          <p>
+            I love the idea of having a place I can contribute every day. I want the
+            connection, the excitement, and I want to be challenged. I guess I might even want to be needed. I'm loyal,
+            trustworthy, and good in a crisis.
+          </p>
+          <p>
+            Love exploring how to make user interfaces with design-centric approach. Enjoy solving
+            challenging math problems in my free time. Fond of Ancient Indian mythology - I find the stories and
+            lessons fascinating. I'm not afraid to take risks and try my luck at big wins when I can!
+          </p>
+          <p>
+            Fun fact! I've been programing for
+            <span id="time-container">0</span> seconds!
+          </p>
+        </div>
+        <img src="./Infinity Gauntlet.jpg" alt="A photo of Infinity Gauntlet" class="portrait" />
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <details class="project">
+        <summary class="project-title">
+          <h3>JavaScript Algorithms and Data Structures</h3>
+        </summary>
+        <img src="./Cash Register.jpeg" alt="Cash Register" class="project-image" />
+        <p class="project-description">
+          Building realistic projects to improve coding Skills. Eg. Cash register, Calorie counter, Forum leadboard,
+          Advanced dice game, etc.
+        </p>
+      </details>
+
+      <details class="project">
+        <summary class="project-title">
+          <h3>Frontend Mentor - HTML & CSS</h3>
+        </summary>
+        <img src="./Result Summary.jpeg" alt="Result Summary" class="project-image" />
+        <p class="project-description">
+          Build small projects to understand the CSS properties, Flexbox, Grid, etc. Eg. QR code component, Recipe page,
+          Chat app illustration, Product preview card component, etc
+        </p>
+      </details>
+
+      <details class="project">
+        <summary class="project-title">
+          <h3>Personal Portfolio</h3>
+        </summary>
+        <img src="./Magazine.png" alt="Magazine" class="project-image" />
+        <p class="project-description">
+          Build a simple portfolio with some of my projects which clear my basic concept through mini projects. Eg.
+          Product Page, Magazine page, Balance sheet, Cafe menu, etc.
+        </p>
+      </details>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div id="skills-container">
+        <i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3' ></i>
+        <i class='bx bxs-file-js' ></i>
+        <i class='bx bxl-figma' ></i>
+        <i class='bx bxl-github' ></i>
+        <i class='bx bxs-file-md' ></i>
+        <i class='bx bxl-python'></i>
+        <i class='bx bxl-c-plus-plus' ></i>
+        <i class='bx bxl-mongodb' ></i>
+        <i class='bx bxs-file-json' ></i>
+        <i class='bx bxl-bootstrap' ></i>
+        <i class='bx bxl-markdown'></i>
+        <i class='bx bxl-google-cloud' ></i>
+      </div>
+    </section>
+
+    <a href="./Gaurav Gorane Resume.pdf" class="resume">Download Resume<i class='bx bx-download'></i></a>
+  </main>
+
+  <footer>Made with <span class="heart">♥</span> in Pune</footer>
+</body>
+<script>
+  const timeContainer = document.getElementById("time-container");
+  const BIRTH_DAY = "8-13-2003";
+  const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+  const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+  setInterval(() => {
+    const now = new Date();
+    const difference = Math.floor(
+      (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+    );
+
+    timeContainer.innerText = intlNumberFormatter.format(difference);
+  }, 1000);
+</script>
+
+</html>
